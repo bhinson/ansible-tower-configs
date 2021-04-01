@@ -7,7 +7,7 @@ each module, you can create a configuration file located at
 
 host = tower.example.com
 username = admin
-password = <<adminpassword>>
+password = adminpassword
 
 
 tower-ldap:
