@@ -5,9 +5,9 @@ Note: As an alternative to supplying the Tower credentials for
 each module, you can create a configuration file located at
 "~/.tower_cli.cfg" with the following format and contents:
 
-host = tower.example.com
-username = admin
-password = adminpassword
+host = tower.example.com<br>
+username = admin<br>
+password = adminpassword<br>
 
 
 tower-ldap:
