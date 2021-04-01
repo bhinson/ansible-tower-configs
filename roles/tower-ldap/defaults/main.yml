@@ -1,0 +1,21 @@
+---
+# Run under python3 for pip3 support
+ansible_python_interpreter: "/usr/bin/python3"
+
+
+# Remote Tower credentials
+#
+#tower_username: "admin"
+#tower_password: "secretadminpassword"
+
+
+# LDAP/AD server settings
+#
+#ldap_server: "ldap://ldap.example.com:389"
+#bind_dn: "uid=admin,cn=users,cn=accounts,dc=example,dc=com"
+#bind_password: "secretbindpassword"
+#start_tls: "False"
+#user_search: "[u'cn=users,cn=accounts,dc=example,dc=com', u'SCOPE_SUBTREE', u'(uid=%(user)s)']"
+#group_search: "[u'dc=example,dc=com', u'SCOPE_SUBTREE', u'(objectClass=group)']"
+#attribute_map: "{u'first_name': u'givenname', u'last_name': u'sn', u'email': u'mail'}"
+#user_flags_by_group: "{u'is_superuser': u'cn=admins,cn=groups,cn=accounts,dc=example,dc=com'}"

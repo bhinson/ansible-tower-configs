@@ -1,0 +1,73 @@
+---
+# Configure LDAP/AD authentication on Tower instance.
+# Note that the Tower hostname is not specified, because
+# this runs as 'localhost' on each Tower instance in
+# the inventory.
+
+- name: Install required Python module
+  pip:
+    name: ansible-tower-cli
+
+- name: Set LDAP server
+  tower_settings:
+    tower_username: "{{ tower_username }}"
+    tower_password: "{{ tower_password }}"
+    validate_certs: no
+    name: AUTH_LDAP_SERVER_URI
+    value: "{{ ldap_server }}"
+
+- name: Set bind DN
+  tower_settings:
+    tower_username: "{{ tower_username }}"
+    tower_password: "{{ tower_password }}"
+    validate_certs: no
+    name: AUTH_LDAP_BIND_DN
+    value: "{{ bind_dn }}"
+
+- name: Set bind password
+  tower_settings:
+    tower_username: "{{ tower_username }}"
+    tower_password: "{{ tower_password }}"
+    validate_certs: no
+    name: AUTH_LDAP_BIND_PASSWORD
+    value: "{{ bind_password }}"
+
+- name: Set TLS mode
+  tower_settings:
+    tower_username: "{{ tower_username }}"
+    tower_password: "{{ tower_password }}"
+    validate_certs: no
+    name: AUTH_LDAP_START_TLS
+    value: "{{ start_tls }}"
+
+- name: Set user search
+  tower_settings:
+    tower_username: "{{ tower_username }}"
+    tower_password: "{{ tower_password }}"
+    validate_certs: no
+    name: AUTH_LDAP_USER_SEARCH
+    value: "{{ user_search }}"
+
+- name: Set group search
+  tower_settings:
+    tower_username: "{{ tower_username }}"
+    tower_password: "{{ tower_password }}"
+    validate_certs: no
+    name: AUTH_LDAP_GROUP_SEARCH
+    value: "{{ group_search }}"
+
+- name: Set user attribute map
+  tower_settings:
+    tower_username: "{{ tower_username }}"
+    tower_password: "{{ tower_password }}"
+    validate_certs: no
+    name: AUTH_LDAP_USER_ATTR_MAP
+    value: "{{ attribute_map }}"
+
+- name: Set user flags by group
+  tower_settings:
+    tower_username: "{{ tower_username }}"
+    tower_password: "{{ tower_password }}"
+    validate_certs: no
+    name: AUTH_LDAP_USER_FLAGS_BY_GROUP
+    value: "{{ user_flags_by_group }}"
