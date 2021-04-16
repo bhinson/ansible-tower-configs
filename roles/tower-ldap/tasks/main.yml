@@ -9,7 +9,7 @@
     name: ansible-tower-cli
 
 - name: Set LDAP server
-  tower_settings:
+  ansible.tower.tower_settings:
     tower_username: "{{ tower_username }}"
     tower_password: "{{ tower_password }}"
     validate_certs: no
@@ -17,7 +17,7 @@
     value: "{{ ldap_server }}"
 
 - name: Set bind DN
-  tower_settings:
+  ansible.tower.tower_settings:
     tower_username: "{{ tower_username }}"
     tower_password: "{{ tower_password }}"
     validate_certs: no
@@ -25,7 +25,7 @@
     value: "{{ bind_dn }}"
 
 - name: Set bind password
-  tower_settings:
+  ansible.tower.tower_settings:
     tower_username: "{{ tower_username }}"
     tower_password: "{{ tower_password }}"
     validate_certs: no
@@ -33,7 +33,7 @@
     value: "{{ bind_password }}"
 
 - name: Set TLS mode
-  tower_settings:
+  ansible.tower.tower_settings:
     tower_username: "{{ tower_username }}"
     tower_password: "{{ tower_password }}"
     validate_certs: no
@@ -41,7 +41,7 @@
     value: "{{ start_tls }}"
 
 - name: Set user search
-  tower_settings:
+  ansible.tower.tower_settings:
     tower_username: "{{ tower_username }}"
     tower_password: "{{ tower_password }}"
     validate_certs: no
@@ -49,7 +49,7 @@
     value: "{{ user_search }}"
 
 - name: Set group search
-  tower_settings:
+  ansible.tower.tower_settings:
     tower_username: "{{ tower_username }}"
     tower_password: "{{ tower_password }}"
     validate_certs: no
@@ -57,7 +57,7 @@
     value: "{{ group_search }}"
 
 - name: Set user attribute map
-  tower_settings:
+  ansible.tower.tower_settings:
     tower_username: "{{ tower_username }}"
     tower_password: "{{ tower_password }}"
     validate_certs: no
@@ -65,7 +65,7 @@
     value: "{{ attribute_map }}"
 
 - name: Set user flags by group
-  tower_settings:
+  ansible.tower.tower_settings:
     tower_username: "{{ tower_username }}"
     tower_password: "{{ tower_password }}"
     validate_certs: no
